@@ -1,0 +1,30 @@
+<div class="job-application-container">
+  <h2>Job Application</h2>
+  <form [formGroup]="jobApplicationForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" />
+    </div>
+    <div>
+      <label for="surname">Surname:</label>
+      <input id="surname" formControlName="surname" />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" />
+    </div>
+    <div>
+      <label for="job">Job Position:</label>
+      <input id="job" formControlName="job" />
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" type="number" />
+    </div>
+    <div>
+      <label for="cv">Upload CV:</label>
+      <input id="cv" type="file" (change)="onFileChange($event)" />
+    </div>
+    <button type="submit">Submit Application</button>
+  </form>
+</div>

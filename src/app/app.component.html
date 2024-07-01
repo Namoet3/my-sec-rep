@@ -1,0 +1,31 @@
+<div class="header">
+  <img src="assets\guris_logo.png" alt="Logo" class="logo">
+</div>
+<div class="form-container">
+  <div class="left-panel">
+    <h2>Job Application</h2>
+    <form [formGroup]="jobApplicationForm" (ngSubmit)="onSubmit()">
+      <div class="input-wrapper">
+        <label for="name">Name:</label>
+        <input id="name" formControlName="name" placeholder="Enter your name" />
+      </div>
+      <div class="input-wrapper">
+        <label for="surname">Surname:</label>
+        <input id="surname" formControlName="surname" placeholder="Enter your surname" />
+      </div>
+      <div class="input-wrapper">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" placeholder="Enter your email" />
+      </div>
+      <div class="input-wrapper">
+        <label for="job">Job Position:</label>
+        <input id="job" formControlName="job" placeholder="Enter job position" />
+      </div>
+      <div class="input-wrapper">
+        <label for="age">Age:</label>
+        <input id="age" type="number" formControlName="age" placeholder="Enter your age" />
+      </div>
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</div>
