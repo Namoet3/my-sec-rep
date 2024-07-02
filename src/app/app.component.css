@@ -8,13 +8,13 @@ body {
 .header {
   width: 100%;
   padding: 20px;
-  background-color: #f8f8f8; /* Adjust background color as needed */
+  background-color: #f8f8f8;
   display: flex;
   align-items: center;
 }
 
 .logo {
-  height: 50px; /* Adjust size as needed */
+  height: 50px;
 }
 
 .form-container {
@@ -28,6 +28,11 @@ body {
 
 h2 {
   text-align: left;
+  cursor: pointer;
+}
+
+h4 {
+  margin-top: 0;
 }
 
 .input-wrapper {
@@ -36,16 +41,17 @@ h2 {
   flex-direction: column;
 }
 
-  .input-wrapper label {
-    margin-bottom: 5px;
-  }
+.input-wrapper label {
+  margin-bottom: 5px;
+}
 
-  .input-wrapper input {
-    width: 300px; /* Adjust width as needed */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+.input-wrapper input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
 input:focus {
   border-color: #66afe9;
@@ -60,8 +66,31 @@ button {
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
+  max-width: 300px;
 }
 
-  button:hover {
-    background-color: #0056b3;
-  }
+button:hover {
+  background-color: #0056b3;
+}
+
+.toggle-content {
+  display: none;
+}
+
+.input-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  max-width: 300px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

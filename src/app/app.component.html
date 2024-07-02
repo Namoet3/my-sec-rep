@@ -5,27 +5,81 @@
   <div class="left-panel">
     <h2>Job Application</h2>
     <form [formGroup]="jobApplicationForm" (ngSubmit)="onSubmit()">
+    <h4>Personal Information</h4>
+    <form [formGroup]="jobApplicationForm" (ngSubmit)="onSubmit()">
       <div class="input-wrapper">
-        <label for="name">Name:</label>
+        <label for="name">Name<span style="color:red">*</span></label>
         <input id="name" formControlName="name" placeholder="Enter your name" />
+        
       </div>
       <div class="input-wrapper">
-        <label for="surname">Surname:</label>
+        <label for="surname">Surname<span style="color:red">*</span></label>
         <input id="surname" formControlName="surname" placeholder="Enter your surname" />
+        
       </div>
       <div class="input-wrapper">
-        <label for="email">Email:</label>
+        <label for="id">TC Kimlik Numarası<span style="color:red">*</span></label>
+        <input id="Kimlik" formControlName="Kimlik" maxlenght="11" required/>
+        
+      </div>
+      <div class="input-wrapper">
+        <label for="email">E-mail<span style="color:red">*</span></label>
         <input id="email" formControlName="email" placeholder="Enter your email" />
+        
       </div>
       <div class="input-wrapper">
-        <label for="job">Job Position:</label>
-        <input id="job" formControlName="job" placeholder="Enter job position" />
+        <label for="telephone">Telephone<span style="color:red">*</span></label>
+        <input id="telephone" formControlName="telephone" placeholder="Enter your telephone number" />
+        
       </div>
       <div class="input-wrapper">
-        <label for="age">Age:</label>
-        <input id="age" type="number" formControlName="age" placeholder="Enter your age" />
+        <label for="address">Address<span style="color:red">*</span></label>
+        <textarea name="txtAdres" class="input" id="txtAdres" style="width: 502px; height: 63px;"></textarea>
       </div>
-      <button type="submit">Submit Application</button>
+      <div class="input-wrapper">
+        <form action="/action_page.php">
+          <label for="birthday">Birthday:<span style="color:red">*</span></label>
+          <input type="date" id="birthday" name="birthday">
+        </form>
+      </div>
     </form>
   </div>
 </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Subheading</title>
+</head>
+<body>
+  <h4 onclick="toggleSubheading()">References <span id="toggle-icon">+</span></h4>
+  <div id="subheading-content" class="toggle-content">
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div class="input-group">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname">
+    </div>
+    <div class="input-group">
+        <label for="contact">Contact Details</label>
+        <input type="text" id="contact" name="contact">
+    </div>
+  </div>
+
+  <script>
+      function toggleSubheading() {
+          const content = document.getElementById('subheading-content');
+          const icon = document.getElementById('toggle-icon');
+          if (content.style.display === "none") {
+              content.style.display = "block";
+              icon.textContent = "-";
+          } else {
+              content.style.display = "none";
+              icon.textContent = "+";
+          }
+      }
+  </script>
+</body>
+<button type="submit">Submit Application</button>
